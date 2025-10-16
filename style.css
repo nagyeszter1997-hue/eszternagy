@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'Union';
+  src: url('assets/fonts/Union-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #000;
+  --fg: #fff;
+  --muted: #e7e7e7;
+  --pad: clamp(20px, 4vw, 48px);
+  --max: 920px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Union', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--pad);
+  z-index: 10;
+  font-size: clamp(28px, 2.4vw, 28px);
+}
+
+a { color: var(--fg); text-decoration: none; }
+a:hover { opacity: .75; }
+.active { opacity: .7; }
+
+.home { height: 100vh; overflow: hidden; }
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.curve {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  marker-end: url(#arrowhead);
+  opacity: 0.8;
+  stroke-dasharray: 12 2000;
+  animation: flow 26s linear infinite;
+  animation-delay: 3s;
+}
+
+@keyframes flow {
+  to { stroke-dashoffset: -2000; }
+}
+
+.swim {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: swimIn 3s ease-out forwards;
+}
+
+@keyframes swimIn {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.section-links {
+  position: absolute;
+  left: var(--pad);
+  bottom: var(--pad);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+  font-size: clamp(18px, 2.2vw, 28px);
+}
+
+.about-page {
+  padding-top: calc(var(--pad) * 2.6);
+  padding-bottom: var(--pad);
+  overflow: auto;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max);
+  padding: 0 var(--pad);
+}
+
+.name { font-size: clamp(24px, 3vw, 28px); margin: 0 0 6px 0; }
+.role { margin: 0 0 22px 0; opacity: .9; }
+.bio { color: var(--muted); margin: 0 0 28px 0; }
+.contact { list-style: none; padding: 0; margin: 0 0 28px 0; }
+.contact li { margin: 6px 0; }
+.section { margin-top: 28px; }
+.section h3 { margin: 0 0 8px 0; font-weight: 600; font-size: 1rem; opacity: .9; }
+.section ul { margin: 0; padding: 0; list-style: none; }
+.section li { margin: 4px 0; }
+
+@media (max-width: 640px) {
+  .container { padding: 0 calc(var(--pad) * .8); }
+  .site-header { font-size: 18px; }
+}
