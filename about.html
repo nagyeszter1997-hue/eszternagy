@@ -5,31 +5,154 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About / Contact — Eszter Nagy</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html, body {
+      overflow-y: auto;
+      height: auto;
+      min-height: 100vh;
+    }
+
+    .about-header {
+      margin-top: 8rem;
+      text-align: center;
+    }
+
+    .about-header h1 {
+      font-size: 4rem;
+      font-weight: 300;
+      color: hsl(0, 2%, 76%);
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      color: hsl(0, 2%, 76%);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      letter-spacing: -0.01em;
+    }
+
+    .about-content h2 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    .about-content h3 {
+      font-size: 1.2rem;
+      margin-top: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .about-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0 2rem 0;
+    }
+
+    .about-content ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-info a {
+      color: hsl(0, 2%, 76%);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      opacity: 0.3;
+    }
+
+    @media (max-width: 800px) {
+      .about-header h1 {
+        font-size: 2.6rem;
+      }
+      .about-content {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header">
-    <a href="index.html" class="nav-left">Home</a>
-    <a href="about.html" class="nav-right active">About / Contact</a>
+    <a href="index.html" class="nav-left">Eszter Nagy</a>
+    <a href="index.html" class="nav-right">Home</a>
   </header>
 
-  <main class="about-page">
-    <div class="container">
-      <h2 class="name">Eszter Nagy</h2>
-      <p class="role">Audiovisual designer</p>
+  <main>
+    <section class="about-header">
+      <h1>About / Contact</h1>
+    </section>
 
-      <p class="bio">Eszter Nagy (1997) is an audiovisual designer and researcher working in the field of representation of working classes and the material culture of everyday life. Her practice is based on archival work, interacting with communities, and understanding their habits and meeting points.</p>
+    <section class="about-content">
+      <h2>Eszter Nagy</h2>
+      <p><em>Audiovisual designer</em></p>
 
-      <ul class="contact">
-        <li><a href="tel:+36303157845">+36303157845 (HU)</a></li>
-        <li><a href="mailto:nagyeszter1997@gmail.com">nagyeszter1997@gmail.com</a></li>
-        <li><a href="https://www.instagram.com/eszterno" target="_blank" rel="noopener">Instagram</a></li>
+      <p>
+        Eszter Nagy (1997) is an audiovisual designer and researcher working in the field of representation of working classes and the material culture of everyday life. Her practice is based on archival work, interacting with communities, and understanding their habits and meeting points.
+      </p>
+
+      <div class="contact-info">
+        <p>
+          <a href="tel:+36303157845">+36 30 315 7845 (HU)</a><br>
+          <a href="mailto:nagyeszter1997@gmail.com">nagyeszter1997@gmail.com</a><br>
+          <a href="https://www.instagram.com/eszterno" target="_blank" rel="noopener">@eszterno</a>
+        </p>
+      </div>
+
+      <h3>Education</h3>
+      <ul>
+        <li>2024 • <em>Archiving the Present</em>, digital archival workshop series with Archival Consciousness, NL</li>
+        <li>2021–2023 • MA, Non Linear Narrative, Royal Academy of Art (KABK), NL</li>
+        <li>2017–2021 • BA, Media Design, Moholy-Nagy University of Art and Design (MOME), HU</li>
+        <li>2019–2020 • Erasmus Scholarship, BA, Audiovisual Design, Willem de Kooning Academy (WDKA), NL</li>
       </ul>
 
-      <p class="downloads">
-        <a href="assets/EszterNagy_CV_2025.pdf" target="_blank" rel="noopener"> CV (PDF)</a><br>
-        <a href="assets/Enagy_Portfolio_2025.pdf" target="_blank" rel="noopener"> Portfolio (PDF)</a>
-      </p>
-    </div>
+      <h3>Exhibitions / Presentations / Residencies</h3>
+      <ul>
+        <li>2025 • Group exhibition, <em>Edge or No Edge</em>, <em>Arena</em>, Wonder Festival, Broeltoren Kortrijk, BE</li>
+        <li>2025 • Group exhibition, <em>Edge or No Edge</em>, <em>All the Small Things</em>, Z33, Hasselt, BE</li>
+        <li>2025 • Group exhibition, <em>Places Called Palaces </em>, Verbs of Existence</em>, Association of Young Artists, Budapest, HU</li>
+        <li>2025 • Artist presentation, <em>Cultural Radiance</em>, Collegium Hungaricum Berlin, DE</li>
+        <li>2024 • Group exhibition, <em>Edge or No Edge</em>, Texture Museum, Kortrijk, BE</li>
+        <li>2024 • Group exhibition, <em>Places Called Palaces</em>, Wonder Festival, Kortrijk, BE</li>
+        <li>2024 • Research residency, Designregio, Kortrijk, BE</li>
+        <li>2024 • Residency and exhibition, <em>Oranjeboom Winkelcentrum</em>, Sportkantine, Rotterdam, NL</li>
+        <li>2023 • Graduation exhibition, <em>Outside Through Within</em>, KABK Graduation Show, NL</li>
+        <li>2022 • Exhibition, <em>Breaking News</em>, KABK, The Hague, NL</li>
+      </ul>
+
+      <h3>Audiovisual performances</h3>
+      <ul>
+        <li>2025 • Live audiovisual performance, <em>My Baby</em> with Jerom Fischer, September tour, NL</li>
+        <li>2025 • Visual content with Emma Milasiute for Floor Jansen, summer tour, NL</li>
+        <li>2025 • Visual content with Emma Milasiute for Maan, Lowlands, NL</li>
+        <li>2025 • Live audiovisual performance, Lente Kabinet, NL</li>
+        <li>2024 • Live audiovisual performance, DGTL Amsterdam, NL</li>
+        <li>2024 • Live audiovisual performance, Lente Kabinet, NL</li>
+        <li>2023 • Live audiovisual performance, DGTL ADE, NL</li>
+        <li>2023 • Live audiovisual performance, DGTL Amsterdam, NL</li>
+        <li>2023 • Visual content, Lente Kabinet, NL</li>
+        <li>2022 • Live visuals, Modular, Massilo, NL</li>
+        <li>2022 • Live visuals with Zalán Szakács, Darc, NL</li>
+        <li>2021 • Dekmantel Connects with Zalán Szakács, NL</li>
+      </ul>
+
+      <h3>Grants</h3>
+      <ul>
+        <li>2025 • <em>Think in Tangerines</em>, residency at Kiosk, Tangier, Morocco (Stimuleringsfonds)</li>
+        <li>2025 • <em>Best Selected</em>, design grant scheme (Stimuleringsfonds)</li>
+        <li>2025 • <em>Best Selected</em>, mobility grant (Culture Moves Europe)</li>
+        <li>2024 • <em>New Project Development Grant</em> (Designregio Kortijk)</li>
+        <li>2023 • <em>Places Called Palaces</em>, project grant (Amarte Fonds)</li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>
