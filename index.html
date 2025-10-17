@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0;url=https://www.eszternagy.eu/" />
+    <meta http-equiv="refresh" content="0; url=/about.html" />
     <script>
-      // redirect instantly, before the page renders
-      window.location.href = "https://www.eszternagy.eu/";
+      window.location.href = "/about.html";
     </script>
+    <title>Redirecting...</title>
     <style>
-      html, body { display: none; }
+      html, body { background: black; color: white; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; }
+      body::after { content: "Loading..."; opacity: 0.4; }
     </style>
   </head>
   <body></body>
