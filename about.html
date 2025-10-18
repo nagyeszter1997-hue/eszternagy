@@ -20,16 +20,30 @@
     .about-header h1 {
       font-size: 4rem;
       font-weight: 300;
-      color: hsl(0, 2%, 76%);
+      color: hsl(0, 0%, 16%);
       margin: 0;
       letter-spacing: -0.02em;
+      transition: text-shadow 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* 🔥 Add red glow on hover like the index page */
+    .about-header h1:hover {
+      text-shadow: 0 0 8px red, 0 0 16px red;
+      opacity: 1;
+      animation: pulse-glow 1.2s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0% { text-shadow: 0 0 6px red, 0 0 12px red; }
+      50% { text-shadow: 0 0 12px red, 0 0 24px red; }
+      100% { text-shadow: 0 0 6px red, 0 0 12px red; }
     }
 
     .about-content {
       max-width: 800px;
       margin: 4rem auto;
       padding: 0 2rem;
-      color: hsl(0, 2%, 76%);
+      color: hsl(0, 0%, 16%);
       font-size: 1.1rem;
       line-height: 1.8;
       letter-spacing: -0.01em;
@@ -45,7 +59,7 @@
       font-size: 1.2rem;
       margin-top: 3rem;
       font-weight: 400;
-      letter-spacing: 0.05em;
+      letter-spacing: -0.01em; /* matches h2 */
     }
 
     .about-content ul {
@@ -59,7 +73,7 @@
     }
 
     .contact-info a {
-      color: hsl(0, 2%, 76%);
+      color: hsl(0, 0%, 16%);
       text-decoration: none;
       transition: opacity 0.3s ease;
     }
@@ -118,7 +132,7 @@
       <ul>
         <li>2025 • Group exhibition, <em>Edge or No Edge</em>, <em>Arena</em>, Wonder Festival, Broeltoren Kortrijk, BE</li>
         <li>2025 • Group exhibition, <em>Edge or No Edge</em>, <em>All the Small Things</em>, Z33, Hasselt, BE</li>
-        <li>2025 • Group exhibition, <em>Places Called Palaces </em>, Verbs of Existence</em>, Association of Young Artists, Budapest, HU</li>
+        <li>2025 • Group exhibition, <em>Places Called Palaces</em>, <em>Verbs of Existence</em>, Association of Young Artists, Budapest, HU</li>
         <li>2025 • Artist presentation, <em>Cultural Radiance</em>, Collegium Hungaricum Berlin, DE</li>
         <li>2024 • Group exhibition, <em>Edge or No Edge</em>, Texture Museum, Kortrijk, BE</li>
         <li>2024 • Group exhibition, <em>Places Called Palaces</em>, Wonder Festival, Kortrijk, BE</li>
@@ -137,22 +151,4 @@
         <li>2024 • Live audiovisual performance, DGTL Amsterdam, NL</li>
         <li>2024 • Live audiovisual performance, Lente Kabinet, NL</li>
         <li>2023 • Live audiovisual performance, DGTL ADE, NL</li>
-        <li>2023 • Live audiovisual performance, DGTL Amsterdam, NL</li>
-        <li>2023 • Visual content, Lente Kabinet, NL</li>
-        <li>2022 • Live visuals, Modular, Massilo, NL</li>
-        <li>2022 • Live visuals with Zalán Szakács, Darc, NL</li>
-        <li>2021 • Dekmantel Connects with Zalán Szakács, NL</li>
-      </ul>
-
-      <h3>Grants</h3>
-      <ul>
-        <li>2025 • <em>Think in Tangerines</em>, residency at Kiosk, Tangier, Morocco (Stimuleringsfonds)</li>
-        <li>2025 • <em>Best Selected</em>, design grant scheme (Stimuleringsfonds)</li>
-        <li>2025 • <em>Best Selected</em>, mobility grant (Culture Moves Europe)</li>
-        <li>2024 • <em>New Project Development Grant</em> (Designregio Kortijk)</li>
-        <li>2023 • <em>Places Called Palaces</em>, project grant (Amarte Fonds)</li>
-      </ul>
-    </section>
-  </main>
-</body>
-</html>
+        <li
