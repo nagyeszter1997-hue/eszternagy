@@ -1,116 +1,194 @@
-@font-face {
-  font-family: 'Union';
-  src: url('assets/fonts/Union-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-:root {
-  --bg: #000;
-  --fg: #fff;
-  --muted: #e7e7e7;
-  --pad: clamp(20px, 4vw, 48px);
-  --max: 920px;
-}
-
-* { box-sizing: border-box; }
-html, body { height: 100%; }
-body {
+/* General reset */
+body, html {
   margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: 'Union', Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  padding: 0;
+  background-color: #c3bfbf;
+  color: #111111;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
+/* Header navigation */
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
-  padding: var(--pad);
+  align-items: center;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  right: 3rem;
   z-index: 10;
-  font-size: clamp(28px, 2.4vw, 28px);
 }
 
-a { color: var(--fg); text-decoration: none; }
-a:hover { opacity: .75; }
-.active { opacity: .7; }
-
-.home { height: 100vh; overflow: hidden; }
-.bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+.site-header a {
+  color: hsl(0, 0%, 16%);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
 }
 
-.curve {
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 1.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  marker-end: url(#arrowhead);
-  opacity: 0.8;
-  stroke-dasharray: 12 2000;
-  animation: flow 26s linear infinite;
-  animation-delay: 3s;
+.site-header a:hover {
+  opacity: 0.3;
 }
 
-@keyframes flow {
-  to { stroke-dashoffset: -2000; }
-}
-
-.swim {
-  transform: translateX(-100%);
-  opacity: 0;
-  animation: swimIn 3s ease-out forwards;
-}
-
-@keyframes swimIn {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
-
-.section-links {
-  position: absolute;
-  left: var(--pad);
-  bottom: var(--pad);
+/* Centered main text (home only) */
+.home {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  z-index: 2;
-  font-size: clamp(18px, 2.2vw, 28px);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
 }
 
-.about-page {
-  padding-top: calc(var(--pad) * 2.6);
-  padding-bottom: var(--pad);
-  overflow: auto;
-  min-height: 100vh;
+.title-line {
+  font-size: 6rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: hsl(0, 0%, 16%);
+  transition: opacity 0.3s ease;
 }
 
-.container {
-  max-width: var(--max);
-  padding: 0 var(--pad);
+.title-line:hover {
+  opacity: 0.3;
 }
 
-.name { font-size: clamp(24px, 3vw, 28px); margin: 0 0 6px 0; }
-.role { margin: 0 0 22px 0; opacity: .9; }
-.bio { color: var(--muted); margin: 0 0 28px 0; }
-.contact { list-style: none; padding: 0; margin: 0 0 28px 0; }
-.contact li { margin: 6px 0; }
-.section { margin-top: 28px; }
-.section h3 { margin: 0 0 8px 0; font-weight: 600; font-size: 1rem; opacity: .9; }
-.section ul { margin: 0; padding: 0; list-style: none; }
-.section li { margin: 4px 0; }
+/* Link styling for clickable project titles */
+.title-line a {
+  color: inherit;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease, opacity 0.3s ease;
+}
 
-@media (max-width: 640px) {
-  .container { padding: 0 calc(var(--pad) * .8); }
-  .site-header { font-size: 18px; }
+/* Different glow colors for each project title (home page only) */
+.home-page .the-best-selected a:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px #ff0066, 0 0 16px #ff0066; /* pink-red */
+}
+
+.home-page .edge-or-no-edge a:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff; /* cyan */
+}
+
+.home-page .places-called-palaces a:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px #ffff00, 0 0 16px #ffff00; /* yellow */
+}
+
+.home-page .audiovisual-work a:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px #ff6600, 0 0 16px #ff6600; /* orange */
+}
+
+/* Footer */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
+  right: 3rem;
+  color: hsl(0, 0%, 16%);
+  font-size: 1.2rem;
+}
+
+.site-footer a, 
+.site-footer p {
+  color: hsl(0, 0%, 16%);
+  text-decoration: none;
+  margin: 0;
+  transition: opacity 0.3s ease;
+}
+
+.site-footer a:hover {
+  opacity: 0.3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .title-line {
+    font-size: 3rem;
+  }
+
+  .site-header a, 
+  .site-footer a, 
+  .site-footer p {
+    font-size: 1rem;
+  }
+}
+
+/* Match h3 style to h2 for consistent typography */
+.about-content h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* 🔥 Red glow hover for About / Contact page */
+.about-header h1:hover,
+.about-content h2:hover,
+.about-content h3:hover {
+  text-shadow: 0 0 8px red, 0 0 16px red;
+  animation: pulse-glow 1.2s infinite;
+  opacity: 1;
+}
+
+/* 💖 Pink glow hover for The Best Selected page */
+.best-selected-header h1:hover,
+.best-selected-content h2:hover,
+.best-selected-content h3:hover {
+  text-shadow: 0 0 8px #ff0066, 0 0 16px #ff0066;
+  animation: pulse-glow 1.2s infinite;
+  opacity: 1;
+}
+
+/* 💙 Cyan glow hover — identical to index page */
+.edge-or-no-edge-header h1:hover,
+.edge-or-no-edge-content h2:hover,
+.edge-or-no-edge-content h3:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 1),
+               0 0 16px rgba(0, 255, 255, 1),
+               0 0 32px rgba(0, 255, 255, 0.6),
+               0 0 48px rgba(0, 255, 255, 0.4);
+  animation: pulse-glow-cyan 1.2s infinite;
+}
+
+/* 💛 Yellow glow hover for Places Called Palaces page */
+.places-called-palaces-header h1:hover,
+.places-called-palaces-content h2:hover,
+.places-called-palaces-content h3:hover {
+  text-shadow: 0 0 8px #ffff00, 0 0 16px #ffff00;
+  animation: pulse-glow 1.2s infinite;
+  opacity: 1;
+}
+
+/* 🧡 Orange glow hover for Audiovisual Work page */
+.audiovisual-work-header h1:hover,
+.audiovisual-work-content h2:hover,
+.audiovisual-work-content h3:hover {
+  text-shadow: 0 0 8px #ff6600, 0 0 16px #ff6600;
+  animation: pulse-glow 1.2s infinite;
+  opacity: 1;
+}
+
+/* ✨ Shared glow animation */
+@keyframes pulse-glow {
+  0% { text-shadow: 0 0 6px currentColor, 0 0 12px currentColor; }
+  50% { text-shadow: 0 0 12px currentColor, 0 0 24px currentColor; }
+  100% { text-shadow: 0 0 6px currentColor, 0 0 12px currentColor; }
+}
+
+/* ✨ Special cyan animation for Edge or No Edge */
+@keyframes pulse-glow-cyan {
+  0% { text-shadow: 0 0 6px rgba(0, 255, 255, 0.8), 0 0 12px rgba(0, 255, 255, 0.6); }
+  50% { text-shadow: 0 0 12px rgba(0, 255, 255, 1), 0 0 24px rgba(0, 255, 255, 1); }
+  100% { text-shadow: 0 0 6px rgba(0, 255, 255, 0.8), 0 0 12px rgba(0, 255, 255, 0.6); }
 }
