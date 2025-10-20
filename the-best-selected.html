@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Best Selected — Eszter Nagy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html, body {
+      overflow-y: auto;
+      height: auto;
+      min-height: 100vh;
+      background-color: #c3bfbf;
+      font-family: 'Helvetica Neue';
+    }
+
+    .project-header {
+      margin-top: 8rem;
+      text-align: center;
+    }
+
+    .project-header h1 {
+      font-size: 4rem;
+      font-weight: 300;
+      color: hsl(0, 0%, 16%);
+      margin: 0;
+      letter-spacing: -0.02em;
+      transition: text-shadow 0.3s ease, opacity 0.3s ease;
+    }
+
+    .project-header h1:hover,
+    .project-content h2:hover,
+    .project-content h3:hover {
+      text-shadow: 0 0 8px #ff0066, 0 0 16px #ff0066;
+      animation: pulse-glow 1.2s infinite;
+      opacity: 1;
+    }
+
+    @keyframes pulse-glow {
+      0% { text-shadow: 0 0 6px #ff0066, 0 0 12px #ff0066; }
+      50% { text-shadow: 0 0 12px #ff0066, 0 0 24px #ff0066; }
+      100% { text-shadow: 0 0 6px #ff0066, 0 0 12px #ff0066; }
+    }
+
+    .project-content {
+      max-width: 1100px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+      color: hsl(0, 0%, 16%);
+      font-size: 1.1rem;
+      line-height: 1.9;
+      letter-spacing: -0.015em;
+    }
+
+    .project-content p {
+      margin-bottom: 2.4rem;
+      text-align: justify;
+    }
+
+    .project-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin: 4rem 0;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: hsl(0, 0%, 25%);
+      margin-top: 0.8rem;
+      font-style: italic;
+      text-align: left;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* 🎥 Videos side by side */
+    .media-pair {
+      display: flex;
+      gap: 1.5rem;
+      margin: 4rem 0;
+      flex-wrap: wrap;
+    }
+
+    .media-pair figure {
+      flex: 1;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .media-pair video {
+      width: 100%;
+      height: auto%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    /* ✅ Credits */
+    .credits {
+      margin-top: 6rem;
+      color: hsl(0, 0%, 16%);
+      padding-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+
+    .credits-section {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1.2rem;
+    }
+
+    .credits h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: -0.01em;
+      line-height: 1.6;
+    }
+
+    .credits h3 + ul {
+      margin-top: 0.4rem;
+    }
+
+    .credits ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .credits ul li {
+      margin-bottom: 0.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .media-pair { flex-direction: column; }
+      .project-content { font-size: 1rem; max-width: 90%; }
+      .credits { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+
+<body class="best-selected-page">
+  <header class="site-header">
+    <a href="index.html" class="nav-left">Eszter Nagy</a>
+    <a href="index.html" class="nav-right">Back</a>
+  </header>
+
+  <main>
+    <section class="project-header">
+      <h1>The Best Selected</h1>
+    </section>
+
+    <section class="project-content">
+      <p>
+        <em>The Best Selected</em> is a collaborative archival project that explores working-class narratives by collecting and preserving highly decorated wrapping paper used and created by workers in the citrus industry. The project forms an interactive archive of the material cultures of working-class communities involved in fruit production, creating a counter-archive that challenges dominant narratives of collecting and preservation.
+      </p>
+      
+      <figure>
+        <img src="images/the-best-selected-1.jpg" alt="The Best Selected project image 1">
+        <figcaption>The database and visualisation are developed in collaboration with Archival Consciousness. nagy.biblio-graph.org/public/</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/the-best-selected-3.jpg" alt="The Best Selected project image 3">
+        <figcaption>A visual cloud representing the initial collection of wrapping papers gathered in 2022.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/the-best-selected-4.jpg" alt="The Best Selected project image 4">
+        <figcaption>A network visualization of the database showing the origins of some citrus wrapping papers from my collection.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/the-best-selected-10.jpg" alt="The Best Selected project image 10">
+        <figcaption>A network of information that shows what data could be collected based on the citrus wrapping papers.</figcaption>
+      </figure>
+
+      <!-- 🎥 Two videos replacing images 5 & 6 -->
+      <div class="media-pair">
+        <figure>
+          <video controls autoplay muted loop playsinline>
+            <source src="videos/the-best-selected-1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Animated exploration of wrapping paper motifs — part 1.</figcaption>
+        </figure>
+
+        <figure>
+          <video controls autoplay muted loop playsinline>
+            <source src="videos/the-best-selected-2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Animated exploration of wrapping paper motifs — part 2.</figcaption>
+        </figure>
+      </div>
+
+      <!-- ✅ Keep the last two images -->
+      <div class="media-pair">
+        <figure>
+          <img src="images/the-best-selected-7.jpg" alt="The Best Selected project image 7">
+          <figcaption>The initial 2022 research was published in ‘How Would You Like To Get Lampooned, My Lord’, a collaboration between the National Library of the Netherlands and the Royal Academy of Art, The Hague.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/the-best-selected-8.jpg" alt="The Best Selected project image 8">
+          <figcaption>Archival publication detail — collaboration between the National Library of the Netherlands and the Royal Academy of Art, The Hague.</figcaption>
+        </figure>
+      </div>
+
+      <!-- ✅ Credits -->
+      <div class="credits">
+        <div class="credits-section">
+          <div>
+            <h3>Project details</h3>
+            <ul>
+              <li>Year: 2023–</li>
+              <li>Medium: Archive / Research</li>
+              <li>Visualisation developed with Archival Consciousness</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Dimensions</h3>
+            <ul>
+              <li>Variable dimensions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="credits-section right">
+          <h3>Presented</h3>
+          <ul>
+            <li><em>ACTIVATE Alternative Media Archives</em>, Hybrid Seminar: Online & University of Lausanne</li>
+            <li><em>Archiving the Present</em> Archival workshop series with Archival Consciousness, NL</li>
+            <li><em>How Would You Like to Get Lampooned, My Lord?</em>, Publication, National Library of the Netherlands and Royal Academy of Art of the Hague, NL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

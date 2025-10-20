@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Places Called Palaces — Eszter Nagy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html, body {
+      overflow-y: auto;
+      height: auto;
+      min-height: 100vh;
+      background-color: #c3bfbf;
+      font-family: 'Helvetica Neue';
+    }
+
+    .project-header {
+      margin-top: 8rem;
+      text-align: center;
+    }
+
+    .project-header h1 {
+      font-size: 4rem;
+      font-weight: 300;
+      color: hsl(0, 0%, 16%);
+      margin: 0;
+      letter-spacing: -0.02em;
+      transition: text-shadow 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* 💛 Yellow glow hover (same as index) */
+    .project-header h1:hover,
+    .project-content h2:hover,
+    .project-content h3:hover {
+      text-shadow: 0 0 8px #ffff00, 0 0 16px #ffff00;
+      animation: pulse-glow 1.2s infinite;
+      opacity: 1;
+    }
+
+    @keyframes pulse-glow {
+      0% { text-shadow: 0 0 6px #ffff00, 0 0 12px #ffff00; }
+      50% { text-shadow: 0 0 12px #ffff00, 0 0 24px #ffff00; }
+      100% { text-shadow: 0 0 6px #ffff00, 0 0 12px #ffff00; }
+    }
+
+    .project-content {
+      max-width: 1100px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+      color: hsl(0, 0%, 16%);
+      font-size: 1.1rem;
+      line-height: 1.9;
+      letter-spacing: -0.015em;
+      text-rendering: optimizeLegibility;
+    }
+
+    .project-content p {
+      margin-bottom: 2.4rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .project-content strong {
+      font-weight: 500;
+    }
+
+    .project-content em {
+      font-style: italic;
+    }
+
+    /* ✅ Image + caption setup */
+    figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .image-pair {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+
+    .image-pair img {
+      width: 50%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: contain;
+      background-color: #c3bfbf;
+      display: block;
+    }
+
+    figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: contain;
+    }
+
+    figcaption {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: hsl(0, 0%, 25%);
+      margin-top: 0.8rem;
+      text-align: left;
+      font-style: italic;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* bottom layout */
+    .credits {
+      margin-top: 6rem;
+      color: hsl(0, 0%, 16%);
+      padding-top: 3rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+
+    .credits-section {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .credits h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin: 0 0 0.2rem 0;
+      letter-spacing: -0.01em;
+      line-height: 1.9;
+    }
+
+    .credits ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .credits ul li {
+      margin-bottom: 0.2rem;
+    }
+
+    .credits .right {
+      text-align: right;
+    }
+
+    @media (max-width: 900px) {
+      .image-pair {
+        flex-direction: column;
+      }
+
+      .image-pair img {
+        width: 100%;
+      }
+
+      figcaption {
+        font-size: 0.9rem;
+      }
+
+      .project-content {
+        font-size: 1rem;
+        max-width: 90%;
+      }
+
+      .credits {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .credits .right {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body class="places-called-palaces-page">
+  <header class="site-header">
+    <a href="index.html" class="nav-left">Eszter Nagy</a>
+    <a href="index.html" class="nav-right">Back</a>
+  </header>
+
+  <main>
+    <section class="project-header">
+      <h1>Places Called Palaces</h1>
+    </section>
+
+    <section class="project-content">
+      <p>
+        The installation offers an alternative guide to the actual palaces of The Hague, home of the Dutch royal family, including those that cater to the many, instead of the royal few. Focusing on fifteen shops, restaurants and stores in The Hague that are called palaces, attention is brought to the extraordinariness of everyday life, with its subtle yet intriguing importance.
+      </p>
+
+      <p>
+        These everyday palaces provide space for ordinary yet fundamental activities such as eating, getting a haircut, and creating community and belonging for customers. They are more substantial in the city than any royal palace.
+      </p>
+
+      <p>
+        Men's Hair Palace. Polyetherpaleis. Golden Palace. Athene's Palace. Platinum Palace. Roti Palace. Kaa Lun Palace. Haringpaleis. Café Palace. Rick's Vispaleis. Peter Vis and Snackpaleis. Jasmine Palace. Scheveningen Vispaleis. Suezkanaal Vispaleis. Hair Palace.
+      </p>
+
+      <!-- Figures with captions -->
+      <figure>
+        <div class="image-pair">
+          <img src="images/places-called-palaces-1.jpg" alt="Platinum Palace engraving">
+          <img src="images/places-called-palaces-2.jpg" alt="Haring Paleis engraving">
+        </div>
+        <figcaption>Platinum Palace and Haring Paleis mirror engravings, part of the “Places Called Palaces” installation.</figcaption>
+      </figure>
+
+          <figure>
+        <div class="image-pair">
+          <img src="images/places-called-palaces-18.jpg" alt="Platinum Palace engraving">
+          <img src="images/places-called-palaces-16.jpg" alt="Haring Paleis engraving">
+        </div>
+        <figcaption>Rick's Vispaleis and Haring Paleis mirror prints, part of the “Places Called Palaces” installation.</figcaption>
+      </figure>
+
+
+      <figure>
+        <div class="image-pair">
+          <img src="images/places-called-palaces-3.jpg" alt="Polyetherpaleis">
+          <img src="images/places-called-palaces-14.jpg" alt="Athene’s Palace">
+        </div>
+        <figcaption>Installation view at Wonder Festival, Kortrijk and at Outside Through Within, KABK Graduation Show. </figcaption>
+      </figure>
+
+      <figure>
+        <div class="image-pair">
+          <img src="images/places-called-palaces-4.jpg" alt="Golden Palace">
+          <img src="images/places-called-palaces-5.jpg" alt="Roti Palace">
+        </div>
+        <figcaption>Screen-printed acrylic glasses, using  rephrasing the store’s original branding, gifted and documented with the owners of the local stores. Rick's Vispaleis.</figcaption>
+      </figure>
+
+      <figure>
+        <div class="image-pair">
+          <img src="images/places-called-palaces-6.jpg" alt="Scheveningen Vispaleis">
+          <img src="images/places-called-palaces-7.jpg" alt="Jasmine Palace">
+        </div>
+        <figcaption>The employee of Harring Paleis with the print. </figcaption>
+      </figure>
+
+      <figure>
+        <div class="image-pair">
+          <img src="images/places-called-palaces-8.jpg" alt="Café Palace">
+          <img src="images/places-called-palaces-9.jpg" alt="Rick’s Vispaleis">
+        </div>
+        <figcaption>The shop of Het Polyetherpaleis.</figcaption>
+      </figure>
+
+      <figure>
+        <div class="image-pair">
+          <img src="images/places-called-palaces-10.jpg" alt="Peter Vis and Snackpaleis">
+          <img src="images/places-called-palaces-11.jpg" alt="Hair Palace">
+        </div>
+        <figcaption>The employee of Vispaleis Schevningen.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/places-called-palaces-12.jpg" alt="Installation overview">
+        <figcaption>Riso printed publication and the documentation of the stores called palaces.</figcaption>
+      </figure>
+
+      
+
+      <!-- Credits -->
+      <div class="credits">
+        <div class="credits-section">
+          <div>
+            <h3>Project details</h3>
+            <ul>
+              <li>Medium: Video installation / 3D reconstruction</li>
+              <li>Year: 2024</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Dimensions</h3>
+            <ul>
+              <li>Variable installation dimensions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="credits-section right">
+          <h3>Exhibitions</h3>
+          <ul>
+            <li><em>Wonder Festival</em>, Kortrijk, BE</li>
+            <li><em>All the Small Things</em>, Z33, Hasselt, BE</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

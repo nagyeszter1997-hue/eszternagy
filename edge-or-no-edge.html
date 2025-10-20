@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edge or No Edge — Eszter Nagy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html, body {
+      overflow-y: auto;
+      height: auto;
+      min-height: 100vh;
+      background-color: #c3bfbf;
+      font-family: 'Helvetica Neue';
+    }
+
+    .project-header.edge-or-no-edge-header {
+      margin-top: 8rem;
+      text-align: center;
+    }
+
+    .edge-or-no-edge-header h1 {
+      font-size: 4rem;
+      font-weight: 300;
+      color: hsl(0, 0%, 16%);
+      margin: 0;
+      letter-spacing: -0.02em;
+      transition: text-shadow 0.3s ease, opacity 0.3s ease;
+    }
+
+    .edge-or-no-edge-header h1:hover,
+    .project-content h2:hover,
+    .project-content h3:hover {
+      opacity: 1;
+      text-shadow: 
+        0 0 8px rgba(0, 255, 255, 1),
+        0 0 16px rgba(0, 255, 255, 1),
+        0 0 32px rgba(0, 255, 255, 0.6),
+        0 0 48px rgba(0, 255, 255, 0.4);
+      animation: pulse-glow-cyan 1.2s infinite;
+    }
+
+    @keyframes pulse-glow-cyan {
+      0% {
+        text-shadow: 
+          0 0 6px rgba(0, 255, 255, 0.8), 
+          0 0 12px rgba(0, 255, 255, 0.6);
+      }
+      50% {
+        text-shadow: 
+          0 0 12px rgba(0, 255, 255, 1), 
+          0 0 24px rgba(0, 255, 255, 1);
+      }
+      100% {
+        text-shadow: 
+          0 0 6px rgba(0, 255, 255, 0.8), 
+          0 0 12px rgba(0, 255, 255, 0.6);
+      }
+    }
+
+    .project-content {
+      max-width: 1100px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+      color: hsl(0, 0%, 16%);
+      font-size: 1.1rem;
+      line-height: 1.9;
+      letter-spacing: -0.015em;
+      text-rendering: optimizeLegibility;
+    }
+
+    .project-content p {
+      margin-bottom: 2.4rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    figure {
+      margin: 4rem 0;
+    }
+
+    figcaption {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: hsl(0, 0%, 25%);
+      margin-top: 0.8rem;
+      text-align: left;
+      font-style: italic;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .project-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .image-pair {
+      display: flex;
+      gap: 1.5rem;
+      margin: 4rem 0;
+      flex-wrap: wrap;
+    }
+
+    .image-pair figure {
+      flex: 1;
+      aspect-ratio: 1 / 1; /* same size */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .image-pair img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    /* 🎥 Video + image pair */
+    .media-pair {
+      display: flex;
+      gap: 1.5rem;
+      margin: 4rem 0;
+      flex-wrap: wrap;
+    }
+
+    .media-pair figure {
+      flex: 1;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .media-pair video,
+    .media-pair img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .credits {
+      margin-top: 6rem;
+      color: hsl(0, 0%, 16%);
+      padding-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-size: 1rem;
+    }
+
+    .credits-section {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .credits h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .credits ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .credits ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .credits .right {
+      text-align: right;
+    }
+
+    @media (max-width: 900px) {
+      .image-pair,
+      .media-pair {
+        flex-direction: column;
+      }
+
+      .project-content {
+        font-size: 1rem;
+        max-width: 90%;
+      }
+
+      .credits {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .credits .right {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body class="edge-or-no-edge-page">
+  <header class="site-header">
+    <a href="index.html" class="nav-left">Eszter Nagy</a>
+    <a href="index.html" class="nav-right">Back</a>
+  </header>
+
+  <main>
+    <section class="project-header edge-or-no-edge-header">
+      <h1>Edge or No Edge</h1>
+    </section>
+
+    <section class="project-content">
+      <p>
+        A binary logic connects the worlds of computers and weaving. In computers, it determines whether a pixel is drawn or not; in weaving, the same binary reasoning takes place when the warp thread is raised or lowered. <em>Edge or No Edge</em> interweaves craftsmanship with the digital world. Starting with a 1987 jacquard woven napkin designed by Marc Van Hoe and executed by weaving company Verilin, the work transforms local icons into digital copies.
+      </p>
+
+      <p>
+        <em>Edge or No Edge</em> realizes a dialogue between pixels and weaves in the installation, where tapestry is placed next to LED screens.
+      </p>
+
+      <div class="image-pair">
+        <figure>
+          <img src="images/edge-or-no-edge-1.jpg" alt="Detail of the tapestry showing the pixel-like woven pattern.">
+          <figcaption>Tapestry showing the pixel-like woven pattern.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/edge-or-no-edge-2.jpg" alt="LED screen and textile weaving shown side by side.">
+          <figcaption>LED screen and textile weaving shown side by side.</figcaption>
+        </figure>
+      </div>
+
+      <figure>
+        <img src="images/edge-or-no-edge-5.jpg" alt="Close-up of weaving structure showing binary thread pattern.">
+        <figcaption>Two-part LED panel installation based on the icons transforming.</figcaption>
+      </figure>
+
+      <div class="image-pair">
+        <figure>
+          <img src="images/edge-or-no-edge-3.jpg" alt="LED pixels displaying woven motif translation.">
+          <figcaption>LED pixels displaying woven motif translation.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/edge-or-no-edge-7.jpg" alt="Tapestry section reflecting pixel grid arrangement.">
+          <figcaption>Napkin design by Marc Van Hoe for the Flemish Government, 1987.</figcaption>
+        </figure>
+      </div>
+
+      <figure>
+        <img src="images/edge-or-no-edge-6.jpg" alt="Installation view showing tapestry and LED screens together.">
+        <figcaption>Engraved acrylic and aluminium plates featuring edge-detected icons that represent the meanings of the local symbols.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/edge-or-no-edge-8.jpg" alt="Installation view showing tapestry and LED screens together.">
+        <figcaption>Installation view of ‘All the Small Things’, exhibited at Z33.</figcaption>
+      </figure>
+
+      <!-- 🎥 Video + Image pair section -->
+      <div class="media-pair">
+        <figure>
+          <video controls autoplay muted loop playsinline>
+            <source src="videos/edge-or-no-edge-1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Installation video of <em>Edge or No Edge</em> showing the interaction between digital and woven elements.</figcaption>
+        </figure>
+
+       <figure>
+          <video controls autoplay muted loop playsinline>
+            <source src="videos/edge-or-no-edge-2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Installation video of <em>Edge or No Edge</em> showing the interaction between digital and woven elements.</figcaption>
+        </figure>
+
+      </div>
+
+      <div class="credits">
+        <div class="credits-section">
+          <div>
+            <h3>Project details</h3>
+            <ul>
+              <li>Medium: Installation / Textile / Digital</li>
+              <li>Year: 2024</li>
+              <li>Made with the generous support of Designregio Kortrijk</li>
+              <li>Production by B&T Textilia</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Dimensions</h3>
+            <ul>
+              <li>Tapestry: 200 × 200 cm</li>
+              <li>LED screens: 19 × 19 cm</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Exhibitions</h3>
+          <ul>
+            <li><em>All the Small Things</em>, Z33, Hasselt, BE</li>
+            <li><em>Arena</em>, Wonder Festival, Broeltoren, Kortrijk, BE</li>
+            <li><em>All the Small Things</em>, Texture Museum, Kortrijk, BE</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
